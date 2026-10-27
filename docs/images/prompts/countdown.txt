@@ -1,0 +1,40 @@
+Use case: ui-mockup
+Asset type: README screenshot-style illustration, landscape 4:3, approximately 1600 x 1200 pixels.
+Primary request: Show a real Ruby-to-GW-BASIC countdown conversion in the visual style of a late-1980s IBM PC GW-BASIC 3.23 screen. Match the supplied style reference's pure black background, crisp chunky gray bitmap monospace glyphs, understated VGA color accents, and inverted gray function-key labels. This is an explanatory screen illustration, not a photograph or a modern application UI.
+Composition: A full-screen DOS text display with two columns. Ruby source on the left, generated numbered GW-BASIC on the right, then a full-width output area below. Use thin DOS box-drawing rules, generous black breathing room, and aligned code. Main text is light gray. Small section headings can be cyan. The exact text and case below must be preserved, including all quotes, hash signs, dollar signs, parentheses, and operators. Keep every code line fully visible and unwrapped. The code is real converter output: do not simplify or invent it.
+Top text:
+ruby2gwbasic
+RUBY SOURCE -> GW-BASIC
+
+Left heading: RUBY SOURCE
+Left code, verbatim:
+count = 3
+while count > 0
+  puts count
+  count -= 1
+end
+puts "Go!"
+
+Right heading: GW-BASIC 3.23
+Right code, verbatim:
+10 V1#=3#
+20 IF (V1#>0#) THEN 40
+30 GOTO 80
+40 N#=V1#
+50 PRINT MID$(STR$(N#),2+(N#<0#))
+60 V1#=(V1#-1#)
+70 GOTO 20
+80 PRINT "Go!"
+90 END
+
+Below the code, show the output in a separate full-width console area, verbatim:
+RUN
+3
+2
+1
+Go!
+Ok
+_
+
+Bottom strip: small vintage function-key labels such as 1LIST, 2RUN, 3LOAD, 4SAVE, 5CONT, 6LPT1, 7TRON, 8TROFF, 9KEY, 0SCREEN, in the same restrained gray-on-black inverted-label style as the reference.
+Constraints: clean and sharp bitmap text, flat screen capture, no physical monitor, no reflections, no gradients, no glow, no perspective, no rounded cards, no modern terminal window decorations, no copyright statements or invented product claims, no watermark. Modest cyan and green accents only; mostly gray on pure black.

@@ -1,0 +1,8 @@
+[package]
+name = "ruby2gwbasic"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "A small Ruby-to-GW-BASIC transpiler"
+
+[dependencies]
